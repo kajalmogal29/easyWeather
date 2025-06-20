@@ -1,9 +1,16 @@
 import React from 'react'
+import "./card.css"
 
-export const card = () => {
+const Card = ({mainInfo="loading..",imgae,title}) => {
   return (
-    <div>card</div>
+    <div className='card-body'>
+        <span className='card-title'>{title}</span>
+        <div className='card-image-container'>
+             <img src={imgae}/>
+        </div>
+         <h3>{mainInfo}</h3>
+    </div>
   )
 }
 
-export default card
+export default Card
